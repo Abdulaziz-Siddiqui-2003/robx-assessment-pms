@@ -151,22 +151,4 @@ PUT / Update Product
 }
 
 
-📂 Project Structure
 
-
-Product-Management-System/
-├── backend/
-
-│   ├── config/          # Database connection
-
-│   ├── controllers/     # MVC Logic (productController.js)
-
-│   ├── database/        # SQL Migration Scripts (products.sql)
-│   ├── models/          # Database Queries (productModel.js)
-│   ├── routes/          # API Routes (productRoutes.js)
-│   └── server.js        # Entry Point
-├── frontend/
-│   ├── app/             # Next.js App Router (Pages)
-│   ├── components/      # Reusable UI (ProductForm.jsx)
-│   └── public/          # Static Assets
-└── README.md            # Documentation
