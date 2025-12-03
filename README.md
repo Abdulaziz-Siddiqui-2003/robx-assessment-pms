@@ -153,10 +153,14 @@ PUT / Update Product
 
 📂 Project Structure
 
+
 Product-Management-System/
 ├── backend/
+
 │   ├── config/          # Database connection
+
 │   ├── controllers/     # MVC Logic (productController.js)
+
 │   ├── database/        # SQL Migration Scripts (products.sql)
 │   ├── models/          # Database Queries (productModel.js)
 │   ├── routes/          # API Routes (productRoutes.js)
