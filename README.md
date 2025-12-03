@@ -20,7 +20,9 @@ Follow these steps to get the project running on your local machine.
 
 Ensure MySQL is running.
 
-Navigate to backend/database/ and find the products.sql file.
+Navigate to backend/database/ inside this repository.
+
+Find the products.sql file.
 
 Import or run this SQL script in your MySQL Workbench or terminal.
 
@@ -42,7 +44,8 @@ Install dependencies:
 npm install
 
 
-Create a .env file in the backend root and configure your database:
+Create a .env file in the backend root and configure your database.
+(Note: Replace your_password_here with your actual MySQL root password):
 
 PORT=5000
 DB_HOST=localhost
@@ -70,16 +73,7 @@ Install dependencies:
 npm install
 
 
-Option A: Development Mode
-
-Use this to view code changes. (Note: A small Next.js badge may appear in the corner).
-
-npm run dev
-
-
-App will run on http://localhost:3000
-
-Option B: Production Mode (Recommended for Review)
+Option A: Production Mode (Recommended for Review)
 
 Use this to view the clean, optimized UI as a user would see it (No badges).
 
@@ -89,47 +83,22 @@ npm start
 
 App will run on http://localhost:3000
 
+Option B: Development Mode
+
+Use this to view code changes. (Note: A small Next.js badge may appear in the corner).
+
+npm run dev
+
+
 📖 API Documentation
 
 The backend exposes the following RESTful API endpoints at http://localhost:5000/api.
 
-Products
-
-Method
-
-Endpoint
-
-Description
-
-GET
-
-/products
-
-Retrieve a list of all products.
-
-GET
-
-/products/:id
-
-Retrieve details of a single product.
-
-POST
-
-/products
-
-Create a new product.
-
-PUT
-
-/products/:id
-
-Update an existing product.
-
-DELETE
-
-/products/:id
-
-Delete a product.
+GET  /products       Retrieve a list of all products.
+GET  /products/:id   Retrieve details of a single product.
+POST /products       Create a new product.
+PUT /products/:id    Update an existing product.
+DELETE /products/:id Delete a product.
 
 Request Body Examples
 
@@ -151,4 +120,18 @@ PUT / Update Product
 }
 
 
+📂 Project Structure
 
+Product-Management-System/
+├── backend/
+│   ├── config/          # Database connection
+│   ├── controllers/     # MVC Logic (productController.js)
+│   ├── database/        # SQL Migration Scripts (products.sql)
+│   ├── models/          # Database Queries (productModel.js)
+│   ├── routes/          # API Routes (productRoutes.js)
+│   └── server.js        # Entry Point
+├── frontend/
+│   ├── app/             # Next.js App Router (Pages)
+│   ├── components/      # Reusable UI (ProductForm.jsx)
+│   └── public/          # Static Assets
+└── README.md            # Documentation
